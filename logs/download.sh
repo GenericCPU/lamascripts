@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
-curl -#o /usr/local/bin/cash-in-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-log > /dev/null
-curl -#o /usr/local/bin/cash-out-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-log > /dev/null
-curl -#o /usr/local/bin/bills-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log > /dev/null
-curl -#o /usr/local/bin/cash-in-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-unencrypted > /dev/null
-curl -#o /usr/local/bin/cash-out-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-unencrypted > /dev/null
-curl -#o /usr/local/bin/bills-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log-unencrypted > /dev/null
-curl -#o /usr/local/bin/send-server-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/send-server-log > /dev/null
+curl -#o /usr/local/bin/cash-in-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-log 2>/dev/null
+curl -#o /usr/local/bin/cash-out-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-log 2>/dev/null
+curl -#o /usr/local/bin/bills-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log 2>/dev/null
+curl -#o /usr/local/bin/cash-in-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/cash-out-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/bills-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/send-server-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/send-server-log 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
 chmod 755 /usr/local/bin/bills-log
