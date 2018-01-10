@@ -15,7 +15,9 @@ chmod 755 /usr/local/bin/cash-in-unencrypted
 chmod 755 /usr/local/bin/cash-out-unencrypted
 chmod 755 /usr/local/bin/bills-log-unencrypted
 chmod 755 /usr/local/bin/send-server-log
+echo
 echo 'Done! You may now use the following commands, followed by an email address:'
+echo
 echo 'cash-in-log'
 echo 'cash-out-log'
 echo 'bills-log'
@@ -23,3 +25,4 @@ echo 'cash-in-unencrypted'
 echo 'cash-out-unencrypted'
 echo 'bills-log-unencrypted'
 echo 'send-server-log'
+echo
