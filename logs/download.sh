@@ -8,6 +8,9 @@ curl -#o /usr/local/bin/cash-in-unencrypted https://raw.githubusercontent.com/na
 curl -#o /usr/local/bin/cash-out-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-unencrypted 2>/dev/null
 curl -#o /usr/local/bin/bills-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log-unencrypted 2>/dev/null
 curl -#o /usr/local/bin/send-server-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/send-server-log 2>/dev/null
+curl -#o /usr/local/bin/export-cash-in https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-cash-in 2>/dev/null
+curl -#o /usr/local/bin/export-cash-out https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-cash-out 2>/dev/null
+curl -#o /usr/local/bin/export-bills https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-bills 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
 chmod 755 /usr/local/bin/bills-log
@@ -15,6 +18,9 @@ chmod 755 /usr/local/bin/cash-in-unencrypted
 chmod 755 /usr/local/bin/cash-out-unencrypted
 chmod 755 /usr/local/bin/bills-log-unencrypted
 chmod 755 /usr/local/bin/send-server-log
+chmod 755 /usr/local/bin/export-cash-in
+chmod 755 /usr/local/bin/export-cash-out
+chmod 755 /usr/local/bin/export-bills
 echo
 echo 'Done! You may now use the following commands, followed by an email address:'
 echo
