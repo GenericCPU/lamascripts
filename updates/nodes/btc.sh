@@ -13,6 +13,6 @@ mv /usr/local/bin/bitcoin-tx /usr/local/bin/bitcoind-tx-old
 mv /usr/local/bin/bitcoin-qt /usr/local/bin/bitcoind-qt-old
 cp /tmp/bitcoin-0.16.0/bin/* /usr/local/bin/
 rm -r /tmp/bitcoin-0.16.0
-rm -r /tmp/bitcoin.tar.gz
+rm /tmp/bitcoin.tar.gz
 supervisorctl start bitcoin
 echo 'Bitcoin Core is updated.'
