@@ -5,7 +5,7 @@ echo 'Updating Bitcoin Core. This may take a minute.'
 supervisorctl stop bitcoin
 echo 'Downloading...'
 curl -#o /tmp/bitcoin.tar.gz https://bitcoin.org/bin/bitcoin-core-0.16.0/bitcoin-0.16.0-x86_64-linux-gnu.tar.gz
-tar -xvzf /tmp/bitcoin.tar.gz -C /tmp/ 2>/dev/null
+tar -xzf /tmp/bitcoin.tar.gz -C /tmp/
 echo 'Updating...'
 mv /usr/local/bin/bitcoind /usr/local/bin/bitcoind-old
 mv /usr/local/bin/bitcoin-cli /usr/local/bin/bitcoin-cli-old
