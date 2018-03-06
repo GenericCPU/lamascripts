@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 supervisorctl stop bitcoin
 curl -#o bitcoin.tar.gz https://bitcoin.org/bin/bitcoin-core-0.16.0/bitcoin-0.16.0-x86_64-linux-gnu.tar.gz
