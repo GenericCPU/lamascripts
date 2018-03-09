@@ -18,8 +18,8 @@ then
   DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes mutt >/dev/null;
 fi
 
-SERVER_LOG_ARCHIVE=/tmp/lamassu-server-log_$HOSTNAME.tar
-tar -cvf $SERVER_LOG_ARCHIVE /var/log/supervisor/lamassu-server*
+SERVER_LOG_ARCHIVE=/tmp/lamassu-server-log_$HOSTNAME.tar.bz2
+tar -cvjf $SERVER_LOG_ARCHIVE /var/log/supervisor/lamassu-server*
 export EMAIL="Server Log <$EMAIL_ADDRESS>"
 echo "Attached are your archived server logs from $HOSTNAME." | mutt -s "Archived server logs from $HOSTNAME" -a $SERVER_LOG_ARCHIVE -- $EMAIL_ADDRESS
 rm $SERVER_LOG_ARCHIVE
