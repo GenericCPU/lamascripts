@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 echo 'Setting Ethereum to light mode. This may take up to 10 minutes.'
 supervisorctl stop ethereum
