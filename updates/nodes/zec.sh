@@ -14,5 +14,6 @@ mv /usr/local/bin/zcash-fetch-params /usr/local/bin/zcash-fetch-params-old
 cp /tmp/zcash-1.1.0/bin/* /usr/local/bin/
 rm -r /tmp/zcash-1.1.0
 rm /tmp/zcash.tar.gz
+curl -#o /etc/supervisor/conf.d/zcash.conf https://raw.githubusercontent.com/naconner/lamascripts/master/updates/nodes/zcash.conf
 supervisorctl start zcash
 echo 'Zcash is updated.'
