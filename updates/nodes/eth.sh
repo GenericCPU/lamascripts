@@ -4,12 +4,12 @@ set -e
 echo 'Updating Ethereum. This may take a minute.'
 supervisorctl stop ethereum
 echo 'Downloading...'
-curl -#o /tmp/ethereum.tar.gz https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.8.4-2423ae01.tar.gz
+curl -#o /tmp/ethereum.tar.gz https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.8.6-12683fec.tar.gz
 tar -xzf /tmp/ethereum.tar.gz -C /tmp/
 echo 'Updating...'
 mv /usr/local/bin/geth /usr/local/bin/geth-old
-cp /tmp/geth-linux-amd64-1.8.4-2423ae01/geth /usr/local/bin/geth
-rm -r /tmp/geth-linux-amd64-1.8.4-2423ae01
+cp /tmp/geth-linux-amd64-1.8.6-12683fec/geth /usr/local/bin/geth
+rm -r /tmp/geth-linux-amd64-1.8.6-12683fec
 rm /tmp/ethereum.tar.gz
 supervisorctl start ethereum
 echo 'Ethereum is updated.'
