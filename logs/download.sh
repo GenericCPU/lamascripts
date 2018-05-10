@@ -14,6 +14,8 @@ curl -#o /usr/local/bin/export-bills https://raw.githubusercontent.com/naconner/
 curl -#o /usr/local/bin/cash-out-actions https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-actions 2>/dev/null
 curl -#o /usr/local/bin/out-actions-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/out-actions-unencrypted 2>/dev/null
 curl -#o /usr/local/bin/export-out-actions https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-out-actions 2>/dev/null
+curl -#o /usr/local/bin/customers-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/customers-log 2>/dev/null
+curl -#o /usr/local/bin/export-customers https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-customers 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
 chmod 755 /usr/local/bin/bills-log
@@ -27,12 +29,15 @@ chmod 755 /usr/local/bin/export-bills
 chmod 755 /usr/local/bin/cash-out-actions
 chmod 755 /usr/local/bin/out-actions-unencrypted
 chmod 755 /usr/local/bin/export-out-actions
+chmod 755 /usr/local/bin/customers-log
+chmod 755 /usr/local/bin/export-customers
 echo
 echo 'Done! You may now use the following commands, followed by an email address:'
 echo
 echo 'cash-in-log'
 echo 'cash-out-log'
 echo 'bills-log'
+echo 'customers-log'
 echo 'cash-in-unencrypted'
 echo 'cash-out-unencrypted'
 echo 'bills-log-unencrypted'
