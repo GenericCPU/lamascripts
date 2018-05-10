@@ -43,5 +43,5 @@ echo 'cash-out-unencrypted'
 echo 'bills-log-unencrypted'
 echo 'send-server-log'
 echo
-echo 'The first three encrypt the logs prior to sending them, thus should first import a PGP key onto your server. Otherwise, use the unencrypted commands.'
+echo 'The first four encrypt the logs prior to sending them, thus should first import a PGP key onto your server. Otherwise, use the unencrypted commands.'
 echo
