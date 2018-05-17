@@ -4,6 +4,7 @@ set -e
 supervisorctl stop lamassu-server
 supervisorctl stop lamassu-admin-server
 npm -g install lamassu/lamassu-server#v5 --unsafe-perm
+curl -#o /usr/lib/node_modules/lamassu-server/migrations/migrate-tools.js https://raw.githubusercontent.com/lamassu/lamassu-server/staging/migrations/migrate-tools.js
 lamassu-migrate
 if [[ $(cat /etc/lamassu/lamassu.json) = *lamassuCaPath* ]]; then
         echo "No need to edit lamassu.json. Continuing..."
