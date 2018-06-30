@@ -25,6 +25,10 @@ cp /tmp/litecoin-0.16.0/bin/* /usr/local/bin/
 rm -r /tmp/litecoin-0.16.0
 rm /tmp/litecoin.tar.gz
 
+echo 'Clearing Litecoin logs...'
+mv /var/log/supervisor/litecoin.err.log /var/log/supervisor/litecoin.err.log-$d
+mv /var/log/supervisor/litecoin.out.log /var/log/supervisor/litecoin.out.log-$d
+
 echo "Resetting Litecoin's supervisor configuration..."
 curl -#o /etc/supervisor/conf.d/litecoin.conf https://raw.githubusercontent.com/naconner/lamascripts/master/switches/reindex/litecoin.conf-orig  &>/dev/null
 supervisorctl reread &>/dev/null
