@@ -2,6 +2,7 @@
 set -e
 
 cd /usr/lib/node_modules/lamassu-server/
+echo
 echo 'Installing new dependencies...'
 npm install ethereumjs-util@5.2.0 &>/dev/null
 npm install inquirer@5.2.0 &>/dev/null
@@ -16,4 +17,7 @@ supervisorctl restart lamassu-server &>/dev/null
 echo 'Done.'
 echo
 echo 'Use may use lamassu-send-coins to manually create transactions.'
-echo 'Note this is a beta script from a server version in testing. Use with great care when sending coins. No warranty express or implied.'
+echo
+echo 'NOTE: This is a beta script from a server version in testing. No warranty express or implied.'
+echo 'Use with great care when sending coins. Perform test transactions to your own addresses first.'
+echo
