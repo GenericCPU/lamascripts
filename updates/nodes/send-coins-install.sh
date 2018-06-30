@@ -16,4 +16,4 @@ supervisorctl restart lamassu-server &>/dev/null
 echo 'Done.'
 echo
 echo 'Use may use lamassu-send-coins to manually create transactions.'
-echo 'Note this is a beta script from an upcoming version in testing. Use with great care when sending coins. No warranty express or implied.'
+echo 'Note this is a beta script from a server version in testing. Use with great care when sending coins. No warranty express or implied.'
