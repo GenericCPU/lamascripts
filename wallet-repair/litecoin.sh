@@ -23,7 +23,7 @@ cp /tmp/litecoin-0.16.0/bin/* /usr/local/bin/
 rm -r /tmp/litecoin-0.16.0
 rm /tmp/litecoin.tar.gz
 
-echo 'Resetting Litecoin's supervisor configuration...'
+echo "Resetting Litecoin's supervisor configuration..."
 curl -#o /etc/supervisor/conf.d/litecoin.conf https://raw.githubusercontent.com/lamassu/lamassu-server/staging/lib/blockchain/litecoin.js
 supervisorctl reread
 
