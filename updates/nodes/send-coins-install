@@ -5,6 +5,6 @@ curl -#o lib/plugins/wallet/geth/geth.js https://raw.githubusercontent.com/lamas
 curl -#o lib/wallet.js https://raw.githubusercontent.com/lamassu/lamassu-server/d14256702eb080592d1f414c0a98a980cee3fb89/lib/wallet.js
 curl -#o bin/lamassu-send-coins https://raw.githubusercontent.com/lamassu/lamassu-server/d14256702eb080592d1f414c0a98a980cee3fb89/bin/lamassu-send-coins
 chmod 755 bin/lamassu-send-coins
-ln -s /usr/bin/lamassu-send-coins /usr/lib/node_modules/lamassu-server/bin/lamassu-send-coins
+ln -s /usr/lib/node_modules/lamassu-server/bin/lamassu-send-coins /usr/bin/lamassu-send-coins
 supervisorctl restart lamassu-server
 echo 'Done'
