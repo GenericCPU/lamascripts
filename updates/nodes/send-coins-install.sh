@@ -18,6 +18,6 @@ echo 'Done.'
 echo
 echo 'Use may use lamassu-send-coins to manually create transactions.'
 echo
-echo 'NOTE: This is a beta script from a server version in testing. No warranty express or implied.'
+echo 'NOTE: This is a beta script from a server version in testing, without warranty express or implied.'
 echo 'Use with great care when sending coins. Perform test transactions to your own addresses first.'
 echo
