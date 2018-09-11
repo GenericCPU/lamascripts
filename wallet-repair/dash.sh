@@ -15,7 +15,7 @@ rsync -a --delete empty-$d/ chainstate/
 rsync -a --delete empty-$d/ blocks/
 
 echo 'Updating Dash...'
-curl -#o /tmp/dash.tar.gz https://github.com/dashpay/dash/releases/download/v0.12.3.2/dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz  &>/dev/null
+curl -#Lo /tmp/dash.tar.gz https://github.com/dashpay/dash/releases/download/v0.12.3.2/dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz  &>/dev/null
 tar -xzf /tmp/dash.tar.gz -C /tmp/
 mv /usr/local/bin/dashd /usr/local/bin/dashd-old
 mv /usr/local/bin/dash-cli /usr/local/bin/dash-cli-old
