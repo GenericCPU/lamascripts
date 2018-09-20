@@ -4,7 +4,7 @@ set -e
 echo 'Updating Dash Core. This may take a minute.'
 supervisorctl stop dash
 echo 'Downloading...'
-curl -#o /tmp/dash.tar.gz https://download.litecoin.org/litecoin-0.16.3/linux/litecoin-0.16.3-x86_64-linux-gnu.tar.gz
+curl -#Lo /tmp/dash.tar.gz https://download.litecoin.org/litecoin-0.16.3/linux/litecoin-0.16.3-x86_64-linux-gnu.tar.gz
 tar -xzf /tmp/dash.tar.gz -C /tmp/
 echo 'Updating...'
 mv /usr/local/bin/dashd /usr/local/bin/dashd-old
