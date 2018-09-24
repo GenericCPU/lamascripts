@@ -51,7 +51,7 @@ decho "rebuilding npm deps"
 cd $(npm root -g)/lamassu-server/ >> ${LOG_FILE} 2>&1
 npm rebuild >> ${LOG_FILE} 2>&1
 
-echo "removing name-related migrations"
+decho "removing name-related migrations"
 rm /usr/local/lib/node_modules/lamassu-server/migrations/031-remove_name_from_devices.js
 rm /usr/local/lib/node_modules/lamassu-server/migrations/1509439657189-add_machine_name_to_devices.js
 
