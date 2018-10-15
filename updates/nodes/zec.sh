@@ -24,6 +24,7 @@ echo
 echo "Downloading Sapling parameters, this will take a minute or two..."
 zcash-fetch-params >> ${LOG_FILE} 2>&1
 supervisorctl update zcash >> ${LOG_FILE} 2>&1
+supervisorctl start zcash >> ${LOG_FILE} 2>&1
 echo
 echo "Zcash is updated and running. You're now ready for Sapling! 🌿"
 echo
