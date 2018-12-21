@@ -10,5 +10,5 @@ echo 'Truncating server_events...'
 su - postgres -c "psql \"lamassu\" -Atc \"DELETE FROM server_events WHERE created < NOW() - INTERVAL '1 hour'\""
 echo 'Truncating machine logs...'
 su - postgres -c "psql \"lamassu\" -Atc \"DELETE FROM logs WHERE timestamp < NOW() - INTERVAL '1 day'\""
-echo 'Done.'
 supervisorctl start lamassu-server lamassu-admin-server
+echo 'Done.'
