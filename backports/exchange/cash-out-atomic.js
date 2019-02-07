@@ -122,7 +122,7 @@ function wasJustAuthorized (oldTx, newTx, isZeroConf) {
   const isAuthorized = () => _.includes(oldTx.status, ['notSeen', 'published', 'rejected']) &&
     _.includes(newTx.status, ['authorized', 'instant', 'confirmed'])
 
-  const isConfirmed = () => _.includes(oldTx.status, ['notSeen', 'published', 'authorized']) &&
+  const isConfirmed = () => _.includes(oldTx.status, ['notSeen', 'published', 'authorized', 'rejected']) &&
     _.includes(newTx.status, ['instant', 'confirmed'])
 
   return isZeroConf ? isAuthorized() : isConfirmed()
