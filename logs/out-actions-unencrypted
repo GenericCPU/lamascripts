@@ -19,7 +19,7 @@ then
 fi
 
 CASHOUTACT_FILE=/tmp/cash-out-actions-$HOSTNAME-$(date -u "+%Y-%m-%d_%H-%M-%S").csv
-su - postgres -c "psql \"lamassu\" -Atc \"COPY cash_out_txs to '$CASHOUTACT_FILE' WITH CSV HEADER\""
+su - postgres -c "psql \"lamassu\" -Atc \"COPY cash_out_actions to '$CASHOUTACT_FILE' WITH CSV HEADER\""
 export EMAIL="Cash-out Actions Log <$EMAIL_ADDRESS>"
 echo "Attached is your unencrypted cash-out actions log." | mutt -s "Unencrypted cash-out actions log from $HOSTNAME" -a $CASHOUTACT_FILE -- $EMAIL_ADDRESS
 rm $CASHOUTACT_FILE
