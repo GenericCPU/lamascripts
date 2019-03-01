@@ -2,7 +2,7 @@
 set -e
 
 echo
-echo "This patch is for servers running Ambient Antu (v7.1) or Bullish Bunene (v7.2).
+echo "This patch is for servers running Ambient Antu (v7.1) or Bullish Bunene (v7.2)."
 echo
 echo "However, if you deploy to v7.1 and subsequently update to v7.2, you'll need to deploy this patch again as its changes are overwritten during the upgrade."
 echo
