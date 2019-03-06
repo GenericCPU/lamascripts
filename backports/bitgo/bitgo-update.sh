@@ -8,7 +8,7 @@ echo "However, if you deploy to v7.1 and subsequently update to v7.2, you\'ll ne
 echo
 supervisorctl stop lamassu-server lamassu-admin-server
 cd $(npm root -g)/lamassu-server/
-npm install bitgo@4.40.2 bchaddrjs@0.3.0 --unsafe-perm 2>/dev/null
+npm install bitgo@4.47.0 bchaddrjs@0.3.0 --unsafe-perm 2>/dev/null
 curl -#o $(npm root -g)/lamassu-server/lib/plugins/wallet/bitgo/bitgo.js https://raw.githubusercontent.com/naconner/lamascripts/master/backports/bitgo/bitgo.js
 curl -#o $(npm root -g)/lamassu-server/lib/admin/config.js https://raw.githubusercontent.com/naconner/lamascripts/master/backports/bitgo/config.js
 curl -#o $(npm root -g)/lamassu-server/schemas/bitgo.json https://raw.githubusercontent.com/naconner/lamascripts/master/backports/bitgo/bitgo.json
