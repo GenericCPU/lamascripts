@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 bold=$(tput bold)
+normal=$(tput sgr0)
 
 echo
 echo "Applying patch for Coin ATM Radar support..."
