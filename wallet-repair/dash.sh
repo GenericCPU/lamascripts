@@ -21,8 +21,8 @@ mv /usr/local/bin/dashd /usr/local/bin/dashd-old
 mv /usr/local/bin/dash-cli /usr/local/bin/dash-cli-old
 mv /usr/local/bin/dash-tx /usr/local/bin/dash-tx-old
 mv /usr/local/bin/dash-qt /usr/local/bin/dash-qt-old
-cp /tmp/dashcore-0.13.0/bin/* /usr/local/bin/
-rm -r /tmp/dashcore-0.13.0
+cp /tmp/dashcore-0.13.3/bin/* /usr/local/bin/
+rm -r /tmp/dashcore-0.13.3
 rm /tmp/dash.tar.gz
 
 echo 'Clearing Dash logs...'
