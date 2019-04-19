@@ -25,7 +25,7 @@ cp /tmp/bitcoin-0.16.3/bin/* /usr/local/bin/
 rm -r /tmp/bitcoin-0.16.3
 rm /tmp/bitcoin.tar.gz
 
-echo 'Clearing Bitcoin's logs...'
+echo 'Clearing Bitcoin logs...'
 mv /var/log/supervisor/bitcoin.err.log /var/log/supervisor/bitcoin.err.log-$d
 mv /var/log/supervisor/bitcoin.out.log /var/log/supervisor/bitcoin.out.log-$d
 
