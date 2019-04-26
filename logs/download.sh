@@ -20,6 +20,8 @@ curl -#o /usr/local/bin/customers-log https://raw.githubusercontent.com/naconner
 curl -#o /usr/local/bin/export-customers https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-customers 2>/dev/null
 curl -#o /usr/local/bin/sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/sanctions-log 2>/dev/null
 curl -#o /usr/local/bin/export-sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-sanctions-log 2>/dev/null
+curl -#o /usr/local/bin/trades-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/trades-log 2>/dev/null
+curl -#o /usr/local/bin/export-trades https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-trades 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
 chmod 755 /usr/local/bin/bills-log
@@ -37,6 +39,8 @@ chmod 755 /usr/local/bin/customers-log
 chmod 755 /usr/local/bin/export-customers
 chmod 755 /usr/local/bin/sanctions-log
 chmod 755 /usr/local/bin/export-sanctions-log
+chmod 755 /usr/local/bin/trades-log
+chmod 755 /usr/local/bin/export-trades
 echo
 echo 'Done! You may now use the following commands, followed by an email address:'
 echo
@@ -48,6 +52,7 @@ echo "cash-out-log"
 echo "cash-out-actions"
 echo "customers-log"
 echo "sanctions-log"
+echo "trades-log"
 echo
 echo "${bold}Unencrypted:${normal}"
 echo
@@ -65,6 +70,7 @@ echo "export-cash-out"
 echo "export-out-actions"
 echo "export-customers"
 echo "export-sanctions-log"
+echo "export-trades"
 echo "export-machine-logs"
 echo
 echo 'Refer to the knowledgebase for usage guidelines.'
