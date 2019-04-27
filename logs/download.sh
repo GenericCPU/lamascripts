@@ -21,6 +21,7 @@ curl -#o /usr/local/bin/export-customers https://raw.githubusercontent.com/nacon
 curl -#o /usr/local/bin/sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/sanctions-log 2>/dev/null
 curl -#o /usr/local/bin/export-sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-sanctions-log 2>/dev/null
 curl -#o /usr/local/bin/trades-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/trades-log 2>/dev/null
+curl -#o /usr/local/bin/trades-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/trades-log-unencrypted 2>/dev/null
 curl -#o /usr/local/bin/export-trades https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-trades 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
@@ -40,6 +41,7 @@ chmod 755 /usr/local/bin/export-customers
 chmod 755 /usr/local/bin/sanctions-log
 chmod 755 /usr/local/bin/export-sanctions-log
 chmod 755 /usr/local/bin/trades-log
+chmod 755 /usr/local/bin/trades-log-unencrypted
 chmod 755 /usr/local/bin/export-trades
 echo
 echo 'Done! You may now use the following commands, followed by an email address:'
