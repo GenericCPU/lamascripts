@@ -63,6 +63,7 @@ echo "bills-log-unencrypted"
 echo "cash-out-unencrypted"
 echo "out-actions-unencrypted"
 echo "send-server-log"
+echo "trades-log-unencrypted"
 echo
 echo "${bold}Exports for SCP downloads:${normal}"
 echo
