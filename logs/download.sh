@@ -3,26 +3,32 @@ set -e
 bold=$(tput bold)
 normal=$(tput sgr0)
 
-curl -#o /usr/local/bin/cash-in-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-log 2>/dev/null
-curl -#o /usr/local/bin/cash-out-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-log 2>/dev/null
-curl -#o /usr/local/bin/bills-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log 2>/dev/null
-curl -#o /usr/local/bin/cash-in-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-in-unencrypted 2>/dev/null
-curl -#o /usr/local/bin/cash-out-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-unencrypted 2>/dev/null
-curl -#o /usr/local/bin/bills-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/bills-log-unencrypted 2>/dev/null
-curl -#o /usr/local/bin/send-server-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/send-server-log 2>/dev/null
-curl -#o /usr/local/bin/export-cash-in https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-cash-in 2>/dev/null
-curl -#o /usr/local/bin/export-cash-out https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-cash-out 2>/dev/null
-curl -#o /usr/local/bin/export-bills https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-bills 2>/dev/null
-curl -#o /usr/local/bin/cash-out-actions https://raw.githubusercontent.com/naconner/lamascripts/master/logs/cash-out-actions 2>/dev/null
-curl -#o /usr/local/bin/out-actions-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/out-actions-unencrypted 2>/dev/null
-curl -#o /usr/local/bin/export-out-actions https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-out-actions 2>/dev/null
-curl -#o /usr/local/bin/customers-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/customers-log 2>/dev/null
-curl -#o /usr/local/bin/export-customers https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-customers 2>/dev/null
-curl -#o /usr/local/bin/sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/sanctions-log 2>/dev/null
-curl -#o /usr/local/bin/export-sanctions-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-sanctions-log 2>/dev/null
-curl -#o /usr/local/bin/trades-log https://raw.githubusercontent.com/naconner/lamascripts/master/logs/trades-log 2>/dev/null
-curl -#o /usr/local/bin/trades-log-unencrypted https://raw.githubusercontent.com/naconner/lamascripts/master/logs/trades-log-unencrypted 2>/dev/null
-curl -#o /usr/local/bin/export-trades https://raw.githubusercontent.com/naconner/lamascripts/master/logs/export-trades 2>/dev/null
+apt-get -qq update
+if [ $(dpkg-query -W -f='${Status}' mutt 2>/dev/null | grep -c "ok installed") -eq 0 ];
+then
+  echo "Mutt not installed. Installing..."
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes mutt >/dev/null;
+fi
+curl -#o /usr/local/bin/cash-in-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/cash-in-log 2>/dev/null
+curl -#o /usr/local/bin/cash-out-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/cash-out-log 2>/dev/null
+curl -#o /usr/local/bin/bills-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/bills-log 2>/dev/null
+curl -#o /usr/local/bin/cash-in-unencrypted https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/cash-in-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/cash-out-unencrypted https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/cash-out-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/bills-log-unencrypted https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/bills-log-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/send-server-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/send-server-log 2>/dev/null
+curl -#o /usr/local/bin/export-cash-in https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-cash-in 2>/dev/null
+curl -#o /usr/local/bin/export-cash-out https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-cash-out 2>/dev/null
+curl -#o /usr/local/bin/export-bills https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-bills 2>/dev/null
+curl -#o /usr/local/bin/cash-out-actions https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/cash-out-actions 2>/dev/null
+curl -#o /usr/local/bin/out-actions-unencrypted https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/out-actions-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/export-out-actions https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-out-actions 2>/dev/null
+curl -#o /usr/local/bin/customers-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/customers-log 2>/dev/null
+curl -#o /usr/local/bin/export-customers https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-customers 2>/dev/null
+curl -#o /usr/local/bin/sanctions-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/sanctions-log 2>/dev/null
+curl -#o /usr/local/bin/export-sanctions-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-sanctions-log 2>/dev/null
+curl -#o /usr/local/bin/trades-log https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/trades-log 2>/dev/null
+curl -#o /usr/local/bin/trades-log-unencrypted https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/trades-log-unencrypted 2>/dev/null
+curl -#o /usr/local/bin/export-trades https://raw.githubusercontent.com/lamassusupport/lamascripts/master/logs/export-trades 2>/dev/null
 chmod 755 /usr/local/bin/cash-in-log
 chmod 755 /usr/local/bin/cash-out-log
 chmod 755 /usr/local/bin/bills-log
