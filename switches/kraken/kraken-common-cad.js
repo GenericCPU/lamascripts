@@ -1,5 +1,3 @@
-const coinUtils = require('../../coin-utils')
-
 const PAIRS = {
   BTC: {
     USD: 'XXBTZUSD',
@@ -27,12 +25,4 @@ const PAIRS = {
     USD: 'BCHUSD',
     EUR: 'BCHEUR'
   }
-}
-
-module.exports = {PAIRS, toUnit}
-
-function toUnit (cryptoAtoms, cryptoCode) {
-  const cryptoRec = coinUtils.getCryptoCurrency(cryptoCode)
-  const unitScale = cryptoRec.unitScale
-  return cryptoAtoms.shift(-unitScale)
 }
