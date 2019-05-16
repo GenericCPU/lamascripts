@@ -2,7 +2,7 @@
 set -e
 
 echo "Finding bitstamp.js..."
-cd $(dirname $(find / -name bitstamp.js | grep -v "lamassu-server-old" | grep exchange))
+cd $(dirname $(find / -name bitstamp.js |  grep "/lamassu-server/" | grep exchange))
 echo "Replacing with USD-default Bitstamp trader..."
 curl -#o bitstamp.js https://raw.githubusercontent.com/lamassusupport/lamascripts/master/switches/bitstamp/bitstamp-usd.js
 echo "Restarting lamassu-server..."
