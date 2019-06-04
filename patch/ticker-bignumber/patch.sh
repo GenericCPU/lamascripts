@@ -5,7 +5,7 @@ set -e
 echo
 echo "Patching the tickers..."
 echo
-cd $(npm root -g)/lamassu-server/lib/
+cd $(npm root -g)/lamassu-server/lib/plugins/ticker/
 curl -#o bitpay.js https://raw.githubusercontent.com/LamassuSupport/lamascripts/master/patch/ticker-bignumber/bitpay.js
 curl -#o bitstamp.js https://raw.githubusercontent.com/LamassuSupport/lamascripts/master/patch/ticker-bignumber/bitstamp.js
 curl -#o kraken.js https://raw.githubusercontent.com/LamassuSupport/lamascripts/master/patch/ticker-bignumber/kraken.js
