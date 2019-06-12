@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Finding lib folder..."
+cd $(npm root -g)/lamassu-server/lib/
+echo "Updating plugins.js..."
+sed -i 's/24 hours/72 hours/g' plugins.js 
+echo "Updating route-helper.js..."
+sed -i 's/TRANSACTION_EXPIRATION = T.day/TRANSACTION_EXPIRATION = 3 * T.day/g' route-helpers.js
+echo "Restarting lamassu-server..."
+supervisorctl restart lamassu-server
+echo "Change complete."
