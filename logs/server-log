@@ -7,5 +7,5 @@ supervisorctl stop lamassu-server lamassu-admin-server
 sleep 5s
 send-server-log support@lamassu.is
 sleep 5s
-supervisorctl stop lamassu-server lamassu-admin-server
+supervisorctl start lamassu-server lamassu-admin-server
 echo "Done."
