@@ -4,7 +4,7 @@ set -e
 echo 'Updating Dash Core. This may take a minute.'
 supervisorctl stop dash
 echo 'Downloading...'
-curl -#Lo /tmp/dash.tar.gz https://github.com/dashpay/dash/releases/download/v0.14.0.0/dashcore-0.14.0.0-x86_64-linux-gnu.tar.gz
+curl -#Lo /tmp/dash.tar.gz https://github.com/dashpay/dash/releases/download/v0.14.0.2/dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
 tar -xzf /tmp/dash.tar.gz -C /tmp/
 echo 'Updating...'
 mv /usr/local/bin/dashd /usr/local/bin/dashd-old
