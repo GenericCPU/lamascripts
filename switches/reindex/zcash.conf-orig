@@ -1,0 +1,5 @@
+mainnet=1
+addnode=mainnet.z.cash
+rpcuser=lamassuserver
+rpcpassword=c39eefd65bb0090e2eb9ac8b4dd5431977c9ea708a4e29fcbe9962ee1ab1e6ca
+dbcache=500
