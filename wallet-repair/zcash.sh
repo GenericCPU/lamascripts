@@ -35,8 +35,8 @@ supervisorctl reread &>/dev/null
 
 echo "Updating dependencies..."
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test &>/dev/null
-sudo apt-get update &>/dev/null
-sudo apt-get install libstdc++6 &>/dev/null 
+sudo apt-get -y update &>/dev/null
+sudo apt-get -y install libstdc++6 &>/dev/null 
 
 
 echo "Downloading Sapling parameters..."
