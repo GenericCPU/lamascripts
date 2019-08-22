@@ -13,5 +13,6 @@ cp /tmp/bitcoin-abc-0.20.0/bin/bitcoind /usr/local/bin/bitcoincashd
 cp /tmp/bitcoin-abc-0.20.0/bin/bitcoin-cli /usr/local/bin/bitcoincash-cli
 rm -r /tmp/bitcoin-abc-0.20.0
 rm /tmp/bitcoincash.tar.gz
+sed -i 's/\<connections\>/maxconnections/g' /mnt/blockchains/bitcoincash/bitcoincash.conf
 supervisorctl start bitcoincash
 echo 'Bitcoin Cash is updated.'
