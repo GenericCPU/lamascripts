@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 set -e
 
@@ -12,4 +11,5 @@ curl -#o kraken/kraken.js https://raw.githubusercontent.com/LamassuSupport/lamas
 echo
 supervisorctl restart lamassu-server lamassu-admin-server
 echo
-echo "Patch applied."
+echo "Tickers patched."
+echo
