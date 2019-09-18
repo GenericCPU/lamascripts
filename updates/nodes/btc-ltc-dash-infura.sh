@@ -3,7 +3,9 @@ set -e
 
 # Disable geth
 echo "Disabling Geth..."
-mv /etc/supervisor/conf.d/ethereum.conf /root/ethereum.conf
+if [ -f /etc/supervisor/conf.d/ethereum.conf ]; then
+    mv /etc/supervisor/conf.d/ethereum.conf /root/ethereum.conf
+fi
 supervisorctl reread
 supervisorctl update
 echo "Geth disabled."
