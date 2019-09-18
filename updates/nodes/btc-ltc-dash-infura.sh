@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echo
 
 # Disable geth
 echo "Disabling Geth..."
