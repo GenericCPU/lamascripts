@@ -68,3 +68,5 @@ curl -#o $(npm root -g)/lamassu-server/lib/plugins/ticker/kraken/kraken.js https
 supervisorctl restart lamassu-server lamassu-admin-server
 echo "Tickers updated."
 echo
+echo "Wallet update complete."
+echo
