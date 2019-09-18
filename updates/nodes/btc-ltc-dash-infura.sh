@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+
 echo
 
 # Disable geth
@@ -62,6 +63,7 @@ supervisorctl start litecoin
 echo "Litecoin Core is updated."
 echo
 
+# Update tickers
 echo "Patching the tickers..."
 curl -#o $(npm root -g)/lamassu-server/lib/plugins/ticker/bitpay/bitpay.js https://raw.githubusercontent.com/LamassuSupport/lamascripts/master/patch/ticker-bignumber/bitpay.js
 curl -#o $(npm root -g)/lamassu-server/lib/plugins/ticker/bitstamp/bitstamp.js https://raw.githubusercontent.com/LamassuSupport/lamascripts/master/patch/ticker-bignumber/bitstamp.js
@@ -69,5 +71,6 @@ curl -#o $(npm root -g)/lamassu-server/lib/plugins/ticker/kraken/kraken.js https
 supervisorctl restart lamassu-server lamassu-admin-server
 echo "Tickers updated."
 echo
+
 echo "Wallet update complete."
 echo
